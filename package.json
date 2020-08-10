@@ -1,0 +1,16 @@
+{
+  "name": "ts-gameOfLife",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/masterfabela/ts-gameOfLife.git",
+  "author": "Jose Ramón Vieites Romay <fabelaretorcida@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "start": "yarn parcel src/index.html"
+  }
+}
