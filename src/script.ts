@@ -108,6 +108,16 @@ function nextGenLoop() {
     setTimeout(nextGenLoop, 100);
 }
 
+function prepareRandom(): boolean[][] {
+    const board = prepareBoard();
+    for (let x = 0; x < TILES_X; x++) {
+        for (let y = 0; y < TILES_Y; y++) {
+            board[x][y] = Math.random() < 0.3; // 30% chance for true
+        }
+    }
+    return board;
+}
+
 let BOARD = prepareBoard();
 
 BOARD[1][0] = true;
@@ -132,6 +142,8 @@ canvas.addEventListener("click", event => {
 document.addEventListener("keydown", event => {
     if (event.key == "p") {
         isGamePause = !isGamePause;
+    } else if (event.key == "r") {
+        BOARD = prepareRandom();
     }
 })
 
